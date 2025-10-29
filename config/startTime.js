@@ -1,0 +1,1 @@
+exports.startTime = Date.now();

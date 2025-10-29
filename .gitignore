@@ -1,0 +1,28 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Sessão do WhatsApp (SENSÍVEL!)
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Banco de Dados
+*.db
+*.sqlite
+teto
+
+# Ambiente
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

@@ -1,4 +1,5 @@
-"# 🎤 Kasane Teto Bot
+ 🎤 Kasane Teto Bot
+<img width="1920" height="1600" alt="image" src="https://github.com/user-attachments/assets/a846a668-9956-415d-b686-4dbcd90c952a" />
 
 Um bot do WhatsApp temático de **Kasane Teto** com comandos divertidos, sistema de XP, múltiplos recursos de mídia e muita personalidade!
 

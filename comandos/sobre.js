@@ -1,11 +1,17 @@
-exports.sobre = () => {
-return `
-🌸 Olá! Eu sou *Kasane Teto* 🎀  
-Uma UTAU cheia de energia e agora um bot fofinho para alegrar seu WhatsApp! 💖
+module.exports = () => {
+    return `🎤 *Sobre a Kasane Teto*
 
-🎶 Posso cantar, mandar imagens fofas e conversar com você~  
-✨ Sempre pronta para animar o seu dia!
+Olá! Eu sou a Kasane Teto, um bot criado para trazer diversão e utilidades para o WhatsApp! 
 
-🌟 Criada com carinho por *Teto-Chan* 🌟
-`;
+✨ *Funcionalidades:*
+- Sistema de XP e níveis
+- Download de músicas
+- Fotos de anime
+- E muito mais!
+
+💻 *Desenvolvedor:* Lightshzk
+📅 *Versão:* 1.0.0
+🎵 *Criada com:* whatsapp-web.js
+
+_Divirta-se comigo! 🎀✨_`;
 };

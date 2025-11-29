@@ -9,7 +9,7 @@ exports.sendMenu = async (message, client, pushname, isVip = false, isCargo = '-
     
     try {
         // Caminho da imagem do menu
-        const imagePath = path.join(__dirname, '../assets/menu.gif'); // ou .png, .gif
+        const imagePath = path.join(__dirname, '../assets/menu.gif');
         
         // Verificar se a imagem existe
         if (fs.existsSync(imagePath)) {
@@ -17,6 +17,7 @@ exports.sendMenu = async (message, client, pushname, isVip = false, isCargo = '-
             await client.sendMessage(message.from, media, { 
                 caption: menuText 
             });
+            console.log('✅ Menu enviado com sucesso com imagem!');
         } else {
             // Se não houver imagem, envia apenas o texto
             await message.reply(menuText);
@@ -46,21 +47,46 @@ exports.menu = (prefix, pushname, isVip = false, isCargo = '-') => {
 └─═━┈┈━═─⊱🎵⊰─═━┈┈━═─┘
 ╎
 ┌─═━┈┈━═─⊱🎤⊰─═━┈┈━═─┐
-┊ 『 🎵 』 𝐌𝐄𝐍𝐔𝐒 𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐈𝐒 『 🎵 』
+┊ 『 🎵 』 𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐆𝐄𝐑𝐀𝐈𝐒 『 🎵 』
 └─═━┈┈━═─⊱🎤⊰─═━┈┈━═─┘
 ╎
-┊🎶 ${prefix}menu  - Mostrar este menu fofinho
+┊🎶 ${prefix}menu - Mostrar este menu fofinho
 ┊🎤 ${prefix}sobre - Saber mais sobre Teto-Chan
-┊🎶 ${prefix}ping  - Ver tempo online e latência
-┊🎤 ${prefix}foto  - Receber uma foto fofa de anime
-┊🎶 ${prefix}sticker - Criar sticker de imagem/gif
-┊🎤 ${prefix}toimg - Converter sticker em imagem
+┊🎶 ${prefix}ping - Ver tempo online e latência
+┊🎤 ${prefix}perfil - Ver seu perfil e nível
+┊🎶 ${prefix}foto - Receber uma foto fofa
+┊🎤 ${prefix}boanoite - Receber mensagem de boa noite
+╎
+┌─═━┈┈━═─⊱🎵⊰─═━┈┈━═─┐
+┊ 『 🎧 』 𝐌Ú𝐒𝐈𝐂𝐀 & 𝐌Í𝐃𝐈𝐀 『 🎧 』
+└─═━┈┈━═─⊱🎵⊰─═━┈┈━═─┘
+╎
+┊🎵 ${prefix}play <música> - Baixar música do YouTube
+┊🎤 ${prefix}sticker - Criar sticker de imagem/gif
+┊🎶 ${prefix}toimg - Converter sticker em imagem
+╎
+┌─═━┈┈━═─⊱🌸⊰─═━┈┈━═─┐
+┊ 『 🎌 』 𝐀𝐍𝐈𝐌𝐄 & 𝐅𝐔𝐍 『 🎌 』
+└─═━┈┈━═─⊱🌸⊰─═━┈┈━═─┘
+╎
+┊🎌 ${prefix}fotoanime - Foto de anime aleatória
+┊🐱 ${prefix}neko - Foto fofa de neko
+┊🦊 ${prefix}kitsune - Foto de kitsune (raposa)
+┊🔞 ${prefix}nsfwpic - Conteúdo NSFW (18+)
+╎
+┌─═━┈┈━═─⊱👥⊰─═━┈┈━═─┐
+┊ 『 📱 』 𝐆𝐑𝐔𝐏𝐎 & 𝐒𝐎𝐂𝐈𝐀𝐋 『 📱 』
+└─═━┈┈━═─⊱👥⊰─═━┈┈━═─┘
+╎
+┊👥 ${prefix}grupooficial - Link do grupo oficial
 ╎
 ┌─═━┈┈━═─⊱💖⊰─═━┈┈━═─┐
 ┊  ✦✧✦ Divirta-se com a Kasane Teto Bot! ✦✧✦
 └─═━┈┈━═─⊱💖⊰─═━┈┈━═─┘
 
-_Digite o comando desejado para começar! 🎤✨_`;
+_Digite o comando desejado para começar! 🎤✨_
+
+💡 *Dica:* Cada mensagem te dá XP! Continue conversando para subir de nível! 📈`;
 };
 
 // Função alternativa: menu com foto de URL
@@ -96,7 +122,9 @@ exports.sendMenuWithGif = async (message, client, pushname, isVip = false, isCar
                 caption: menuText,
                 sendVideoAsGif: true // Envia como GIF animado
             });
+            console.log('✅ Menu enviado com GIF animado!');
         } else {
+            console.warn('⚠️ GIF não encontrado, enviando texto apenas');
             await message.reply(menuText);
         }
     } catch (error) {
